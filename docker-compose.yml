@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  main-site:
+    image: web-serve
+    environment:
+      - REPO_URL=https://github.com/thaemisch/website-v4
+    ports:
+      - "8900:3000"
+
+  docs-site:
+    image: web-serve
+    environment:
+      - REPO_URL=https://github.com/thaemisch/docs
+    ports:
+      - "8901:3000"
